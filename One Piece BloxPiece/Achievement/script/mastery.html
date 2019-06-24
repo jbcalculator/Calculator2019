@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="level.js"></script>
+        <script language="javascript" type="text/javascript">
+	function calmastery()
+		{
+            var money = document.getElementById("money").value;
+            var clevel = document.getElementById("clevel").value;
+            var Changmoney = parseInt(money);
+            var Changlevel = parseInt(clevel);
+            getMastery(Changmoney,Changlevel);
+				
+			
+		}
+	</script>
+    </head>
+    <body>
+            เลเวลปัจจุบัน : <input type="text" id="clevel" value=""><br>
+            จำนวนเงิน : <input type="text" id="money" value=""><br><br>
+        <input type="button" onclick="calmastery()">
+    </body>
+</html>

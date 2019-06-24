@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JBShop</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="script/level.js"></script>
+    <script language="javascript" type="text/javascript">
+function calLevel()
+{
+        var money = document.getElementById("money").value;
+        var clevel = document.getElementById("clevel").value;
+        var Changmoney = parseInt(money);
+        var Changlevel = parseInt(clevel);
+        getLevel(Changmoney,Changlevel);
+    
+  
+}
+</script>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br/><h1>JB EZShop</h1><br/>
+          <div class="form-group">
+            <br/><br/>
+            <br/><br/>
+            <br/><br/>
+            <br/><br/>
+            <input type="level" class="form-control" id="clevel" placeholder="Enter your level">
+            <br/><br/>
+            <input type="money" class="form-control" id="money" placeholder="Enter your money">
+            </div>
+            <button type="submit" class="btn btn-theme" onclick="calLevel()">Calculate</button>
+
+          
+        </div>
+      </div>
+
+      
+
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <p class="copyright">&copy; WeBuild - All Rights Reserved</p>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact. 
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=WeBuild
+            -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <script type="text/javascript">
+    $('#countdown').countdown('2019/01/01', function(event) {
+      $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));
+    });
+  </script>
+
+  <script src="contactform/contactform.js"></script>
+
+</body>
+
+</html>
