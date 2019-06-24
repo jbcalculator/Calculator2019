@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JBShop</title>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <script type="text/javascript" src="script/strength.js"></script>
+    <script language="javascript" type="text/javascript">
+function cal()
+{
+  if (document.getElementById("Email1").value > 750)
+    {
+      alert("เลเวล ที่ต้องการปั้มไม่ถูกต้อง")
+    }
+  else if (strength(document.getElementById("exampleInputEmail1").value,document.getElementById("Email1").value)<50)
+    {
+      alert("รับปั้มขั้นต่ำ 50 บาท")
+    }
+  else
+    {
+   
+        
+      alert("ราคาทั้งหมด "+strength(document.getElementById("exampleInputEmail1").value,document.getElementById("Email1").value)+" บาท")
+    }
+  
+}
+</script>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <br/><h1>JB EZShop</h1><br/>
+          <div class="form-group">
+            <br/><br/>
+            <br/><br/>
+            <br/><br/>
+            <br/><br/>
+            <input type="level" class="form-control" id="exampleInputEmail1" placeholder="Enter your level">
+            <br/><br/>
+            <input type="money" class="form-control" id="Email1" placeholder="Enter your money">
+            </div>
+            <button type="submit" class="btn btn-theme" onclick="cal()">Calculate</button>
+
+          
+        </div>
+      </div>
+
+      
+
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+          <p class="copyright">&copy; WeBuild - All Rights Reserved</p>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact. 
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=WeBuild
+            -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.countdown.min.js"></script>
+  <script type="text/javascript">
+    $('#countdown').countdown('2019/01/01', function(event) {
+      $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));
+    });
+  </script>
+
+  <script src="contactform/contactform.js"></script>
+
+</body>
+
+</html>
