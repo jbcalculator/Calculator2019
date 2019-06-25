@@ -1,27 +1,34 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
-    <title>JBShop</title>
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.css" rel="stylesheet">
-    <script type="text/javascript" src="script/Mastery.js"></script>
-    <script language="javascript" type="text/javascript">
-function calMastery()
-{
-        var money = document.getElementById("money").value;
-        var clevel = document.getElementById("clevel").value;
-        var Changmoney = parseInt(money);
-        var Changlevel = parseInt(clevel);
-        getMastery(Changmoney,Changlevel);
-    
-  
-}
-</script>
+  <title>JBShop</title>
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <script type="text/javascript" src="script/Mastery.js"></script>
+  <script language="javascript" type="text/javascript">
+    function calMastery() {
+      var money = document.getElementById("money").value;
+      var clevel = document.getElementById("clevel").value;
+      var rlevel = document.getElementById("rlevel").value;
+      var Changmoney = parseInt(money);
+      var Changlevel = parseInt(clevel);
+      var Changrlevel = parseInt(rlevel);
+      if (Changmoney > 0) {
+        getLevel(Changmoney, Changlevel);
+      } else if (Changrlevel > 0) {
+        getMoney(Changrlevel, Changlevel);
+      } else {
+        alert("Error")
+      }
+
+
+    }
+  </script>
 </head>
 
 <body>
@@ -30,23 +37,27 @@ function calMastery()
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <br/><h1>JB EZShop</h1><br/>
+          <br />
+          <h1>JB EZShop</h1><br />
           <div class="form-group">
-            <br/><br/>
-            <br/><br/>
-            <br/><br/>
-            <br/><br/>
+            <br /><br />
+            <br /><br />
+            <br /><br />
+            <br /><br />
             <input type="level" class="form-control" id="clevel" placeholder="Enter your level">
-            <br/><br/>
-            <input type="money" class="form-control" id="money" placeholder="Enter your money">
-            </div>
-            <button type="submit" class="btn btn-theme"onclick="calMastery()" >Calculate</button>
 
-          
+            <br /><br />
+            <input type="wantlevel" class="form-control" id="rlevel" placeholder="Enter your want level">
+            <br /><br />
+            <input type="money" class="form-control" id="money" placeholder="Enter your money">
+          </div>
+          <button type="submit" class="btn btn-theme" onclick="calMastery()">Calculate</button>
+
+
         </div>
       </div>
 
-      
+
 
       <div class="row">
         <div class="col-lg-6 col-lg-offset-3">
@@ -68,7 +79,7 @@ function calMastery()
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.countdown.min.js"></script>
   <script type="text/javascript">
-    $('#countdown').countdown('2019/01/01', function(event) {
+    $('#countdown').countdown('2019/01/01', function (event) {
       $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));
     });
   </script>
