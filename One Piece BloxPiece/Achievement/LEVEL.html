@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,9 +15,19 @@ function calLevel()
 {
         var money = document.getElementById("money").value;
         var clevel = document.getElementById("clevel").value;
+        var rlevel = document.getElementById("rlevel").value;
         var Changmoney = parseInt(money);
         var Changlevel = parseInt(clevel);
-        getLevel(Changmoney,Changlevel);
+        var Changrlevel = parseInt(rlevel);
+        if(Changmoney>0){
+          getLevel(Changmoney,Changlevel);
+        }else if(Changrlevel>0){
+          getMoney(Changrlevel,Changlevel);
+        }else{
+          alert("Error")
+        }
+
+
     
   
 }
@@ -37,6 +47,8 @@ function calLevel()
             <br/><br/>
             <br/><br/>
             <input type="level" class="form-control" id="clevel" placeholder="Enter your level">
+            <br/><br/>
+            <input type="wantlevel" class="form-control" id="rlevel" placeholder="Enter your want level">
             <br/><br/>
             <input type="money" class="form-control" id="money" placeholder="Enter your money">
             </div>
