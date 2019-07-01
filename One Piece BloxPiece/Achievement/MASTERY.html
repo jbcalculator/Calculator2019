@@ -15,9 +15,9 @@
       var money = document.getElementById("money").value;
       var clevel = document.getElementById("clevel").value;
       var rlevel = document.getElementById("rlevel").value;
-      var Changmoney = parseInt(money);
-      var Changlevel = parseInt(clevel);
-      var Changrlevel = parseInt(rlevel);
+      var Changmoney = parseFloat(money);
+      var Changlevel = parseFloat(clevel);
+      var Changrlevel = parseFloat(rlevel);
       if (Changmoney > 0) {
         getLevel(Changmoney, Changlevel);
       } else if (Changrlevel > 0) {
