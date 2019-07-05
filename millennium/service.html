@@ -5,25 +5,7 @@
 
 <head>
     <title>JBEzShop คำนวณค่าบริการ</title>
-	<script type="text/javascript" src="script/Mastery.js"></script>
-	<script language="javascript" type="text/javascript">
-	function  calMastery()
-		{
-        var money = document.getElementById("money").value;
-        var clevel = document.getElementById("clevel").value;
-        var rlevel = document.getElementById("rlevel").value;
-        var Changmoney = parseFloat(money);
-        var Changlevel = parseFloat(clevel);
-        var Changrlevel = parseFloat(rlevel);
-        if(Changmoney>0){
-            getMastery(Changmoney,Changlevel);
-        }else if(Changrlevel>0){
-          getMoney(Changrlevel,Changlevel);
-        }else if(Changmoney<50){
-          alert("รับปั้มขั้นต่ำ 50 บาท");
-        }
-		}
-	</script>
+	
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css?family=Roboto|Prompt');
@@ -100,17 +82,20 @@
 <body>
 
     <div class="padding">
-        <a href="https://jbcalculator.github.io/CalculateService/">
-            <img src="โลโก้.jpg" style="width:150px;">
-        </a>
-        <h1>
-            MASTERY
-        </h1>
-        <p>
-            เลเวลปัจจุบัน : <input type="level" id="clevel" value=""><br>
-            เลเวลที่ต้องการ : <input type="wantlevel" id="rlevel" value=""><br>
-            จำนวนเงินที่มี : <input type="money" id="money" value=""><br><br>
-            <button class="button button1" onclick="calMastery()">คำนวณราคา</button>
+            <h1>
+                    รายการบริการเสริม
+                </h1>
+     
+                <p align = 'left'> </p>  
+                เก็บเงิน BELI <br>
+                1M = 100 TW <br>
+                เงื่อนไข STRENGTH LV ตัน <br>
+                 มี X2 BELI <br>
+                ---------------------------- <br>
+                บริการซื้อ X2 BELI/EXP = 430 บาท <br>
+                บริการซื้อ ดาบ Yoru = 300 บาท <br>
+                ( เหลือให้ 250 Robuxใน ID ที่ซื้อ )<br>
+                บริการซื้อ เซิฟ VIP = 730 บาท <br><br>      
             <button class="button button1" onclick="window.history.back()">ย้อนกลับ</button>
         </p>
         <a href="https://www.facebook.com/JBEzShop/">
@@ -118,7 +103,7 @@
         </a>
         
     </div>
-	
+
 </body>
 
 </html>
